@@ -1,0 +1,57 @@
+GET http://localhost:4000/api/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWEzNGViMWQwODI2ODVlOWQ2M2Q3OGQiLCJpYXQiOjE2MzgyNTQ2NDJ9.TMcOP7hROd6sLLq31E87gVQi2N0I1M7b7ViLmDbcz2I
+
+###
+POST http://localhost:4000/api/auth/register
+Content-Type: application/json
+
+{
+    "username" : "thaivi",
+    "password" : "1234"
+}
+
+###
+//Api login
+POST http://localhost:4000/api/auth/login
+Content-Type: application/json
+
+{
+   "username" : "iron",
+    "password" : "1234"
+}
+
+###
+POST http://localhost:4000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWEzMWIxMDRkZmRiYTQ3MWRjZGJiNWIiLCJpYXQiOjE2MzgzNTA5OTR9.ZHGLtC4yoyDlbvA9LVGxjZPRfIQeREYDQexw51XzFsw
+
+{
+    "title" : "Vuejs",
+    "description" : "Học vuejs cùng F8 education, rất hay và vui nhộn!",
+    "url" : "https://www.youtube.com/watch?v=rgFd17fyM4A&t=13217s",
+    "status" : "LEARNED"
+}
+
+###
+GET http://localhost:4000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWEzNGViMWQwODI2ODVlOWQ2M2Q3OGQiLCJpYXQiOjE2MzgwOTkxOTV9.lqvGxF4gkg41E3rCvhx4SzT9czuz8txuRq5tdTwLoSA
+###
+PUT http://localhost:4000/api/post/61a35977de2e558852747cde
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWEzNGViMWQwODI2ODVlOWQ2M2Q3OGQiLCJpYXQiOjE2MzgwOTcxMTh9.bhNw5h24JEH5x2nOsZINWdKzMlVF0q2g-eyBQixlxsk
+
+{
+    "title": "Vuejs",
+    "description" : "Learning vuejs",
+    "status" : "LEARNING",
+    "url": "vuejs.com"
+}
+
+
+###
+
+//Delete post 
+DELETE http://localhost:4000/api/post/61a34ed7d082685e9d63d78f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWEzMWIxMDRkZmRiYTQ3MWRjZGJiNWIiLCJpYXQiOjE2MzgwOTkxNjR9.COpEOjIiZsu5e487Ptatajf0U_c4jgQbRddBahGQKu4
+
